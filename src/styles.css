@@ -533,33 +533,40 @@
     margin-bottom: 40px;
   }
 }
-/* MOBILE HERO IMAGE + CONTAINER FIX */
+/* MOBILE HERO — CLEAN TEXT + CLEAR GIFT IMAGE */
 @media (max-width: 720px) {
   .hero {
     min-height: 0;
     height: auto;
     margin: 12px 14px 35px;
-    padding: 42px 21px 300px;
+    padding: 38px 21px 310px;
     border-radius: 28px;
     align-items: flex-start;
+    background: #fff0f6;
   }
 
   .hero-photo {
     inset: 0;
-    background-size: cover;
+    background-size: auto 48%;
     background-repeat: no-repeat;
     background-position: center bottom;
+    background-color: #fff0f6;
   }
 
   .hero::before {
     background: linear-gradient(
       180deg,
-      rgba(255,244,250,.99) 0%,
-      rgba(255,244,250,.96) 32%,
-      rgba(255,244,250,.78) 46%,
-      rgba(255,244,250,.3) 65%,
+      #fff4fa 0%,
+      #fff4fa 45%,
+      rgba(255,244,250,.94) 52%,
+      rgba(255,244,250,.55) 62%,
+      rgba(255,244,250,.08) 75%,
       transparent 85%
     );
+  }
+
+  .hero-glow {
+    background: none;
   }
 
   .hero-content {
@@ -567,26 +574,59 @@
     max-width: 100%;
   }
 
+  .hero-pill {
+    font-size: 8px;
+    padding: 10px 12px;
+  }
+
   .hero h1 {
-    font-size: clamp(39px, 10.5vw, 53px);
-    line-height: 1.06;
-    letter-spacing: -1.8px;
+    font-size: clamp(38px, 10vw, 49px);
+    line-height: 1.08;
+    letter-spacing: -1.7px;
+    margin: 23px 0 15px;
   }
 
   .hero-content > p {
     font-size: 12px;
     line-height: 1.8;
+    margin-bottom: 19px;
+  }
+
+  .hero-buttons {
+    gap: 9px;
+  }
+
+  .hero-stats {
+    gap: 7px;
+    margin-top: 21px;
+  }
+
+  .hero-stats div {
+    min-width: 0;
+    flex: 1;
+    padding: 10px 7px;
+    background: rgba(255,255,255,.93);
+    border-radius: 13px;
+  }
+
+  .hero-stats strong {
+    font-size: 15px;
+  }
+
+  .hero-stats div > span {
+    font-size: 7px;
   }
 
   .hero-note {
     right: 12px;
-    bottom: 42px;
+    bottom: 40px;
     max-width: calc(100% - 24px);
+    padding: 10px 12px;
   }
 
   .scroll-cue {
-    left: 20px;
-    bottom: 15px;
+    left: 18px;
+    bottom: 14px;
   }
 }
 
@@ -594,11 +634,15 @@
   .hero {
     margin-left: 10px;
     margin-right: 10px;
-    padding: 35px 16px 270px;
+    padding: 32px 16px 280px;
     border-radius: 23px;
   }
 
   .hero h1 {
-    font-size: 38px;
+    font-size: 37px;
   }
-}
+
+  .hero-stats div {
+    padding: 9px 5px;
+  }
+}}
